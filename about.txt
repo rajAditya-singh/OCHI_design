@@ -1,13 +1,25 @@
-import React from 'react'
-import { FaArrowUpLong } from "react-icons/fa6";
+<div className='border-black border-t-2 text-black py-10'>
+                <div className='flex justify-evenly'>
+                    <div className='font-["Neue_Montreal"] '>
+                        <h1 className='text-[4vw] tracking-tight leading-none'>Our approach:</h1>
+                        <button className='flex border-2 items-center border-none  bg-zinc-950 rounded-full py-2 text-sm'>
+                            <p className='uppercase text-zinc-300 px-4 font-["Neue_Montreal"] font-semibold'>Read More</p>
+                            <button className=' w-10 h-10 mr-2 flex items-center justify-center bg-zinc-200 border-zinc-400 border-[2px] rounded-full'><FaArrowUpLong className='rotate-45' /></button>
+                        </button>
+                    </div>
 
-function About() {
-    return (
-        <div className='w-full bg-[#CDEA68] rounded-tr-3xl rounded-tl-3xl'>
+                    <div className='rounded-3xl'>
+                        <img className='rounded-xl' src="https://ochi.design/wp-content/uploads/2022/05/Homepage-Photo-663x469.jpg" alt="" />
+                    </div>
+                </div>
 
-            <div className='py-24 px-14 -mb-10 flex '>
-                <h1 className='font-["Neue_Montreal"] text-[4vw] font-normal leading-none text-zinc-900 '>Ochi is a strategic presentation agency for forward-thinking businesses that need to <u className='underline-offset-1'>raise funds, sell prod­ucts, ex­plain com­plex ideas</u>, and <u className='underline-offset-1'>hire great peo­ple</u>.</h1>
             </div>
+
+
+
+
+
+
 
             <div className='border-t-[1px] border-zinc-600 text-zinc-950 flex gap-10 justify-evenly px-16 pt-4 pb-24'>
                 <div className='w-1/2 '>
@@ -31,23 +43,3 @@ function About() {
                     </div>
                 </div>
             </div>
-
-            <div className='grid grid-cols-2 border-t-2 border-zinc-700 py-5 px-8'>
-                <div>
-                    <h2 className='text-zinc-900 text-[4vw] leading-none font-["Neue_Montreal"] mb-6 '>Our approach:</h2>
-                    <a className='flex items-center justify-evenly py-2  border-none w-fit rounded-full bg-zinc-900' href="#">
-                        <p className='font-["Neue_Montreal"] text-lg px-6'>Read More</p>
-                        <div className='px-2'>
-                            <button className=' w-10 h-10 flex items-center justify-center bg-zinc-100 text-zinc-900 border-none border-[2px] rounded-full '><FaArrowUpLong className='rotate-45' /></button>
-                        </div>
-                    </a>
-                </div>
-                <div>
-                    <img className='rounded-xl' src="https://ochi.design/wp-content/uploads/2022/05/Homepage-Photo-663x469.jpg" alt="" />
-                </div>
-            </div>
-        </div>
-    )
-}
-
-export default About
