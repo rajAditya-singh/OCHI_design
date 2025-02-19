@@ -5,7 +5,7 @@ import Marquee from './components/Marquee'
 import About from './components/About'
 import Eye from './components/Eye'
 import Featured from './components/Featured'
-import Review from './components/Review'
+// import Review from './components/Review'
 import Cards from './components/Cards'
 import Footer from './components/Footer'
 
