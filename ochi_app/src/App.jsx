@@ -7,6 +7,7 @@ import Eye from './components/Eye'
 import Featured from './components/Featured'
 import Review from './components/Review'
 import Cards from './components/Cards'
+import Footer from './components/Footer'
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <Featured/>
       {/* <Review/> */}
       <Cards/>
+      <Footer/>
     </div>
   )
 }
