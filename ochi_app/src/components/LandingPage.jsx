@@ -1,15 +1,27 @@
 /* eslint-disable react/jsx-key */
 import React from 'react'
 import { FaArrowUpLong } from "react-icons/fa6";
+import { motion } from "framer-motion"
 
 function LandingPage() {
+
   return (
-    <div className='w-full h-screen bg-zinc-900 pt-1'>
+    <div data-scroll data-scroll-section data-scroll-speed="-0.3" className='w-full h-screen bg-zinc-900 pt-1'>
       <div className='textsttucture mt-36 px-16'>
         {["We Create", "Eye-Opening", "Presentations"].map((item, index) => {
           return <div className='masker'>
             <div className='w-fit flex justify-center items-center'>
-              {index === 1 && (<div className='mr-[1vw] w-[9vw] h-[5.7vw] rounded-md bg-red-700 relative top-[6px]'></div>)}
+              {index === 1 && (
+                <motion.div
+                  initial={{ width: 0 }}
+                  animate={{ width: "9vw" }}
+                  transition={{ ease: [0.87, 0, 0.13, 1], duration: 2 }}
+                  className='mr-[1vw] w-[9vw] h-[5.7vw] overflow-hidden rounded-md  relative top-[6px]'>
+                  <motion.img
+                    initial={{ width: 0 }}
+                    animate={{ width: "9vw" }}
+                    transition={{ ease: [0.87, 0, 0.13, 1], duration: 2 }} key={index} className='w-full h-full' src="https://ochi.design/wp-content/uploads/2022/04/content-image01.jpg" alt=""></motion.img>
+                </motion.div>)}
               <h1 className="flex items-center uppercase text-[9vw] h-full leading-[7vw] font-['Test_Founders_Grotesk_X_Condensed'] font-bold">
                 {item}
               </h1>
