@@ -1,9 +1,19 @@
 /* eslint-disable react/jsx-key */
+import { motion, useAnimation } from 'framer-motion';
 import React from 'react'
 import { FaArrowUpLong } from "react-icons/fa6";
 
 
 function Featured() {
+    const cards = [useAnimation(), useAnimation()]
+
+    const handleHover = (index) => {
+        cards[index].start({ y: "0" })
+    }
+
+    const handleHoverEnd = (index) => {
+        cards[index].start({ y: "100%" })
+    }
     return (
         <div className='w-full py-20  '>
             <div className='w-full px-20 border-b-[1px] text-5xl border-zinc-600 pb-20 '>
@@ -12,13 +22,23 @@ function Featured() {
 
             <div className='px-10'>
                 <div className='cards w-full flex gap-5 mt-10 '>
-                    <div className='cardContainer relative w-1/2'>
+                    <motion.div
+                        onHoverStart={() => handleHover(0)}
+                        onHoverEnd={() => handleHoverEnd(0)}
+                        className='cardContainer relative w-1/2'>
                         <span className='flex items-center gap-2 mb-4'>
                             <div className='w-3 h-3 rounded-full bg-zinc-200'></div>
                             <p className='font-[Neue_Montreal] text-sm'>FYDE</p>
                         </span>
-                        <h1 className='absolute text-[#CDEA68]  leading-none tracking-tighter font-bold  text-8xl left-full -translate-x-1/2 top-1/2 -translate-y-1/2'>
-                            {"FYDE".split('').map((item, index) => <span>{item}</span>)}
+                        <h1 className='absolute flex overflow-hidden text-[#CDEA68]  leading-none tracking-tighter font-bold  text-8xl left-full -translate-x-1/2 top-1/2 -translate-y-1/2 z-10'>
+                            {"FYDE".split('').map((item, index) =>
+                                <motion.span
+                                    className='inline-block'
+                                    initial={{ y: "100%" }}
+                                    animate={cards[0]}
+                                    transition={{ ease: [0.22, 1, 0.36, 1], delay: index * 0.06 }}>
+                                    {item}
+                                </motion.span>)}
                         </h1>
                         <div className='w-full h-[75vh] rounded-xl overflow-hidden'>
                             <div className='card w-full h-full'>
@@ -31,14 +51,24 @@ function Featured() {
                             <button className='border-zinc-600 border-[1px] rounded-full px-3 py-1 font-["Neue_Montreal"] text-zinc-200 font-light text-sm uppercase'>sales deck</button>
                             <button className='border-zinc-600 border-[1px] rounded-full px-3 py-1 font-["Neue_Montreal"] text-zinc-200 font-light text-sm uppercase'>slides design</button>
                         </div>
-                    </div>
-                    <div className='cardContainer relative w-1/2'>
+                    </motion.div>
+                    <motion.div 
+                    onHoverStart={() => handleHover(1)}
+                    onHoverEnd={() => handleHoverEnd(1)}
+                    className='cardContainer relative w-1/2'>
                         <span className='flex items-center gap-2 mb-4'>
                             <div className='w-3 h-3 rounded-full bg-zinc-200'></div>
                             <p className='font-[Neue_Montreal] text-sm'>TRAWA</p>
                         </span>
-                        <h1 className='absolute text-[#CDEA68]  leading-none tracking-tighter font-bold  text-8xl right-full translate-x-1/2 top-1/2 -translate-y-1/2'>
-                            {"TRAWA".split('').map((item, index) => <span>{item}</span>)}
+                        <h1 className='absolute flex overflow-hidden text-[#CDEA68]  leading-none tracking-tighter font-bold  text-8xl right-full translate-x-1/2 top-1/2 -translate-y-1/2 z-10'>
+                            {"TRAWA".split('').map((item, index) => 
+                            <motion.span
+                            className='inline-block'
+                            initial={{ y: "100%" }}
+                            animate={cards[1]}
+                            transition={{ ease: [0.22, 1, 0.36, 1], delay: index * 0.06 }}>
+                            {item}
+                        </motion.span>)}
                         </h1>
                         <div className='w-full h-[75vh] rounded-xl overflow-hidden'>
                             <div className='card w-full h-full'>
@@ -50,7 +80,7 @@ function Featured() {
                             <button className='border-zinc-600 border-[1px] rounded-full px-3 py-1 font-["Neue_Montreal"] text-zinc-200 font-light text-sm uppercase'>design research</button>
                             <button className='border-zinc-600 border-[1px] rounded-full px-3 py-1 font-["Neue_Montreal"] text-zinc-200 font-light text-sm uppercase'>investor deck</button>
                         </div>
-                    </div>
+                    </motion.div>
                 </div>
             </div>
 
