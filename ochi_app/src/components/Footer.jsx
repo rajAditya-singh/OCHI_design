@@ -2,7 +2,7 @@ import React from 'react'
 
 function Footer() {
     return (
-        <div data-scroll data-scroll-section data-scroll-speed="0.3" className='w-full h-screen flex bg-zinc-900 font-["Test_Founders_Grotesk_X_Condensed"] p-12'>
+        <div data-scroll data-scroll-section data-scroll-speed="0.3" className='w-full h-screen flex bg-zinc-900 font-["Test_Founders_Grotesk_X_Condensed"] px-10 pb-10 pt-6'>
             <div className='w-1/2 h-full flex flex-col justify-between'>
                 <div className='heading text-[8vw]'>
                     <h1 className='uppercase -mb-5 font-semibold leading-none text-[9vw]'>EYE-</h1>
@@ -43,11 +43,11 @@ function Footer() {
                     <a href="#"><u className='underline-offset-2 font-["Neue_Montreal"]'>indrmy.126@gmail.com</u></a>
                 </div>
 
-                <div className='flex justify-between'>
-                    <div className=' mt-10 font-["Neue_Montreal"] font-extralight text-zinc-400'>
+                <div className='flex justify-between mt-5'>
+                    <div className='font-["Neue_Montreal"] font-extralight text-zinc-400'>
                         <p>&copy;ochi design 2025. <u className='underline-offset-2'>Legal Terms</u></p>
                     </div>
-                    <div className=' mt-10 font-["Neue_Montreal"] font-extralight text-zinc-400'>
+                    <div className='font-["Neue_Montreal"] font-extralight text-zinc-400'>
                         <p>Website by Adiz</p>
                     </div>
                 </div>
